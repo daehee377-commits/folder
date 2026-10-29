@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -7,6 +8,7 @@ import Signup from './pages/Signup'
 import Account from './pages/Account'
 import Shop from './pages/Shop'
 import Cart from './pages/Cart'
+const Map3D = lazy(() => import('./pages/Map3D'))
 import { useAuth } from './context/AuthContext'
 import { supabaseReady } from './lib/supabase'
 
@@ -33,6 +35,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/gallery" element={<Protected><Gallery /></Protected>} />
+          <Route path="/map" element={<Suspense fallback={<p className="center">3D 지도 불러오는 중…</p>}><Map3D /></Suspense>} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Protected><Cart /></Protected>} />
           <Route path="/account" element={<Protected><Account /></Protected>} />

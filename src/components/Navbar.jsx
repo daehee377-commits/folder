@@ -16,6 +16,7 @@ export default function Navbar() {
     <header className="nav">
       <Link to="/" className="brand">🍊 제주 IP 아카이브</Link>
       <nav>
+        <NavLink to="/map">3D 지도</NavLink>
         <NavLink to="/gallery">갤러리</NavLink>
         <NavLink to="/shop">굿즈샵</NavLink>
         {user ? (

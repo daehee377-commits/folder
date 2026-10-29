@@ -59,3 +59,21 @@ footer { text-align: center; padding: 24px; color: #777; font-size: .9rem; }
 .cart .sum { font-weight: 700; min-width: 90px; text-align: right; }
 .link { background: none; border: 0; color: #888; text-decoration: underline; cursor: pointer; }
 .total { display: flex; justify-content: flex-end; align-items: center; gap: 20px; padding: 18px 0; font-size: 1.15rem; }
+
+.map3d { position: relative; height: calc(100vh - 62px); min-height: 480px; }
+.map3d .stage { position: absolute; inset: 0; overflow: hidden; }
+.map3d .panel { position: absolute; background: #fffe; backdrop-filter: blur(6px); border-radius: 12px; padding: 14px 16px; box-shadow: 0 4px 18px #0003; font-size: .92rem; }
+.map3d .panel h3 { margin: 0 0 8px; font-size: .95rem; }
+.map3d .panel h3:not(:first-child) { margin-top: 14px; }
+.map3d .left { top: 14px; left: 14px; width: 210px; max-height: calc(100% - 60px); overflow: auto; }
+.map3d .right { top: 14px; right: 14px; width: 270px; max-height: calc(100% - 60px); overflow: auto; }
+.map3d .layer { display: flex; align-items: center; gap: 6px; padding: 2px 0; cursor: pointer; }
+.map3d .layer i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.map3d .hint { color: #666; font-size: .8rem; margin: 8px 0 0; }
+.map3d .close { position: absolute; top: 6px; right: 10px; border: 0; background: none; font-size: 1.3rem; cursor: pointer; }
+.map3d dl { margin: 8px 0 0; font-size: .8rem; }
+.map3d dt { color: #888; }
+.map3d dd { margin: 0 0 4px; word-break: break-all; }
+.map3d .status { position: absolute; left: 14px; right: 14px; bottom: 8px; text-align: center; font-size: .8rem; color: #234; text-shadow: 0 0 4px #fff; pointer-events: none; }
+.label3d { background: #000a; color: #fff; padding: 2px 8px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+@media (max-width: 640px) { .map3d .left { width: 160px; } .map3d .right { top: auto; bottom: 34px; left: 14px; right: 14px; width: auto; } }

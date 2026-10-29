@@ -10,6 +10,8 @@ Vite + React + Supabase Auth + Pixabay API, Vercel 배포용 프로젝트.
 | `VITE_SUPABASE_ANON_KEY` | 브라우저 | 같은 화면의 `anon` `public` 키 |
 | `PIXABAY_API_KEY` | 서버 전용 | https://pixabay.com/api/docs/ 로그인 후 표시되는 키 |
 
+| `ODCLOUD_SERVICE_KEY` | 서버 전용 | data.go.kr 로그인 → 마이페이지 → 활용신청한 데이터의 일반 인증키 (3D 지도의 공공데이터 레이어) |
+
 > `service_role` 키는 절대 사용/등록하지 마세요. `PIXABAY_API_KEY`에는 `VITE_` 접두사를 붙이지 않습니다(브라우저 노출 방지).
 
 ## 2. Supabase 설정
