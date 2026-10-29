@@ -5,6 +5,8 @@ import Gallery from './pages/Gallery'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Account from './pages/Account'
+import Shop from './pages/Shop'
+import Cart from './pages/Cart'
 import { useAuth } from './context/AuthContext'
 import { supabaseReady } from './lib/supabase'
 
@@ -31,6 +33,8 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/gallery" element={<Protected><Gallery /></Protected>} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Protected><Cart /></Protected>} />
           <Route path="/account" element={<Protected><Account /></Protected>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

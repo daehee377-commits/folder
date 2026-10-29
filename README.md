@@ -20,6 +20,12 @@ Vite + React + Supabase Auth + Pixabay API, Vercel 배포용 프로젝트.
    - Redirect URLs: `http://localhost:5173/**`, `https://내프로젝트.vercel.app/**`
 3. (수업/테스트용) 이메일 인증을 생략하려면 Providers → Email → "Confirm email" 끄기
 
+### 장바구니 테이블 생성 (필수)
+
+1. Supabase 대시보드 → SQL Editor → New query
+2. `supabase/cart.sql` 내용을 붙여넣고 Run
+3. Table Editor에서 `cart_items` 테이블과 RLS(Row Level Security) 활성화 여부 확인
+
 ## 3. 로컬 실행
 
 ```bash
